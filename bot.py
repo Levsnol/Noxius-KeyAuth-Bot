@@ -4,7 +4,7 @@ import random
 
 import string
 from datetime import datetime
-footerall="t.me/projectnoxius | developed by rotomicora"
+footerall="t.me/opium | developed by rotomicora"
 import discord
 import fade
 import requests
@@ -21,13 +21,8 @@ r=Fore.LIGHTRED_EX
 intents = discord.Intents.all()
 intents.members = True
 gui="""
-       		  ╔═══════════════════════════╗
-          	  ║    ╔╗╔╔═╗═╗ ╦╦╦ ╦╔═╗      ║
-                  ║    ║║║║ ║╔╩╦╝║║ ║╚═╗      ║ 
-        	  ║    ╝╚╝╚═╝╩ ╚═╩╚═╝╚═╝      ║ 
-        	  ╚═══════════════════════════╝ 
         ╔═══════════════════════════════════════════════════╗
-        ║             [Noxius KeyAuth Bot]                  ║
+        ║             [fuck niggers, auth bot v1]           ║
         ╚═══════════════════════════════════════════════════╝
 """
 
@@ -41,7 +36,7 @@ sellerkey="seller_key"
 logsgen="channel_id"
 blacklistlogs="channel_id"
 disclogs="channel_id"
-downloadnoxius="link_here"
+downloadopium="link_here"
 deletekeyslogs="channel_id"
 redeemlogs="channel_id"
 logsdownloads="channel_id"
@@ -60,17 +55,17 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.dnd,activity=discord.Game(f"{prefix}help | Developer: rotomicora"))
 @bot.group(invoke_without_command=True)
 async def help(ctx):
-    embed= discord.Embed(title="***Project Noxius Help***", description="- *List of helps*", colour=0x0001)
-    embed.add_field(name="*Noxius General Help*", value=f"```{prefix}help general```")
-    embed.add_field(name="*Noxius Staffs Help*", value=f"```{prefix}help staff```")
-    embed.add_field(name="*Project Noxius Help*", value=f"```{prefix}help auth```")
-    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
-    embed.set_author(name="Project Noxius", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
+    embed= discord.Embed(title="***opium Help***", description="- *List of helps*", colour=0x0001)
+    embed.add_field(name="*opium General Help*", value=f"```{prefix}help general```")
+    embed.add_field(name="*opium Staffs Help*", value=f"```{prefix}help staff```")
+    embed.add_field(name="*opium Help*", value=f"```{prefix}help auth```")
+    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/opium_rivo_2.0_sticker.png")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/opium_rivo_2.0_sticker.png")
     embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     await ctx.reply(embed=embed)
 @help.command()
 async def general(ctx):
-    embed= discord.Embed(title="*Noxius General Help*", description="- *List of general commands*", colour=0x0001)
+    embed= discord.Embed(title="*opium General Help*", description="- *List of general commands*", colour=0x0001)
     embed.add_field(name="*Bot Ping*", value=f"```{prefix}ping```", inline=True)
     embed.add_field(name="*Bot Info*", value=f"```{prefix}botinfo```", inline=True)
     embed.add_field(name="*Server Info*", value=f"```{prefix}server```", inline=True)
@@ -79,13 +74,13 @@ async def general(ctx):
     embed.add_field(name="*Bot Uptime*", value=f"```{prefix}uptime```", inline=True)
     embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
-    embed.set_author(name="Project Noxius", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     await ctx.reply(embed=embed)
     await ctx.message.delete()
 
 @help.command()
 async def staff(ctx):
-    embed=discord.Embed(title="*Noxius Staff Help*", description="- *List of all commands of Staffs*", colour=0x0001)
+    embed=discord.Embed(title="*opium Staff Help*", description="- *List of all commands of Staffs*", colour=0x0001)
     embed.add_field(name="*Warn*", value=f"```{prefix}warn <@user> <reason>```", inline=True)
     embed.add_field(name="*Kick*", value=f"```{prefix}kick <@user> <reason>```", inline=True)
     embed.add_field(name="*Ban*", value=f"```{prefix}ban <@user> <reason>```", inline=True)
@@ -94,7 +89,7 @@ async def staff(ctx):
     embed.add_field(name="*Clear messages*", value=f"```{prefix}clear <messages>```", inline=True)
     embed.add_field(name="*Change Nickname*", value=f"```{prefix}nick <@user> <newname>```", inline=True)
     embed.add_field(name="*Reset Username*", value=f"```{prefix}resetnick <@user>```", inline=True)
-    embed.set_author(name="Project Noxius", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     await ctx.reply(embed=embed)
@@ -103,7 +98,7 @@ async def staff(ctx):
 @help.command()
 async def auth(ctx):
     embed=discord.Embed(title="*Noxis Auth Help*", description=f"*List of all commands of Auth*", colour=0x00001)
-    embed.set_author(name="Project Noxius", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/noxius_rivo_2.0_sticker.png")
     embed.add_field(name="*Key Gen*", value=f"```{prefix}keygen <expire>```", inline=True)
@@ -120,9 +115,9 @@ async def auth(ctx):
 @bot.event
 async def on_command_error(ctx,error):
 	if isinstance(error, commands.CommandNotFound):
-		await ctx.reply(embed=discord.Embed(title="*Project Noxius Invalid Command*",description=f"{ctx.author.name}, Invalid command, you can do `!help` for all commands!",colour=0xff0000))
+		await ctx.reply(embed=discord.Embed(title="*opium Invalid Command*",description=f"{ctx.author.name}, Invalid command, you can do `!help` for all commands!",colour=0xff0000))
 	if isinstance(error, commands.MissingRequiredArgument):
-		await ctx.reply(embed=discord.Embed(title="*Project Noxius Missin Arguments*",description=f"{ctx.author.name}, Command Missing Argument!",colour=0x00000))
+		await ctx.reply(embed=discord.Embed(title="*opium Missin Arguments*",description=f"{ctx.author.name}, Command Missing Argument!",colour=0x00000))
 	print(f"        {m}[{w}x{m}] {r}{error} {m}[{w}x{m}]")
 
 
@@ -131,7 +126,7 @@ async def on_command_error(ctx,error):
 async def kick(ctx, member: discord.Member, *, reason=None):
 	try:
 		await member.kick(reason=reason)
-		embed=discord.Embed(title="*Project Noxius | User kicked sucesfully*",description=f"{member}, Has been Kicked from {ctx.guild.name}.\nReason is `{reason}`. This Kick was requested from\n{ctx.author.mention}",colour=0x00000)
+		embed=discord.Embed(title="*opium | User kicked sucesfully*",description=f"{member}, Has been Kicked from {ctx.guild.name}.\nReason is `{reason}`. This Kick was requested from\n{ctx.author.mention}",colour=0x00000)
 		embed.add_field(name="*Expiration:*", value=f"```Permantly```", inline=True)
 		embed.add_field(name="*Kicked By:*", value=f"```{ctx.author}```", inline=True)
 		await ctx.send(embed=embed)
@@ -144,7 +139,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
 async def ban(ctx, member: discord.Member, *, reason=None):
 	try:
 		await member.ban(reason=reason)
-		embed=discord.Embed(title="*Project Noxius | User banned sucesfully*",description=f"{member}, Has been banned from **{ctx.guild.name}**.\n This ban was requested from\n{ctx.author.mention}",colour=0x00000)
+		embed=discord.Embed(title="*opium | User banned sucesfully*",description=f"{member}, Has been banned from **{ctx.guild.name}**.\n This ban was requested from\n{ctx.author.mention}",colour=0x00000)
 		embed.add_field(name="*Expiration:*", value=f"```Permantly```", inline=True)
 		embed.add_field(name="*Banned By:*", value=f"```{ctx.author}```", inline=True)
 		embed.add_field(name="*Reason:*", value=f"```{reason}```")
@@ -157,7 +152,7 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 @commands.has_permissions(manage_messages=True)
 async def cooldown(ctx, seconds:int):
 	await ctx.channel_edit.edit(slowmode_delay=seconds)
-	await ctx.send(embed=discord.Embed(title="Project Noxius | Cooldown Specificated",description=f"*SlowMode Is {seconds} in {ctx.channel.mention}+",colour=0x00000))
+	await ctx.send(embed=discord.Embed(title="opium | Cooldown Specificated",description=f"*SlowMode Is {seconds} in {ctx.channel.mention}+",colour=0x00000))
 	logs_channel = bot.get_channel(int(disclogs))
 	await logs_channel.send(embed=discord.Embed(title="<a:zzzzz:1030767093613862962> SlowMode!",description=f"SlowMode Is {seconds} in {ctx.channel.mention}",colour=0x00000))
 @bot.command()
@@ -169,14 +164,14 @@ async def unban(ctx, username,*, reason=None):
 		if ban.user.name == username:
 			user = ban.user
 	await ctx.guild.unban(user,reason=reason)
-	embed=discord.Embed(title="*Project Noxius | User unbanned sucesfully*",description=f"*{user}, Has been Unbanned from ProjectNoxius \n Reason is `{reason}`. This Unban was requested from*\n{ctx.author.mention}",colour=0x00000)
+	embed=discord.Embed(title="*opium | User unbanned sucesfully*",description=f"*{user}, Has been Unbanned from opium \n Reason is `{reason}`. This Unban was requested from*\n{ctx.author.mention}",colour=0x00000)
 	embed.add_field(name="*Unbanned By:*", value=f"`{ctx.author}`", inline=True)
 	await ctx.send(embed=embed)
 	logs_channel = bot.get_channel(int(disclogs))
 	await logs_channel.send(embed=embed)
 @bot.command()
 async def ping(ctx):
-	await ctx.reply(embed=discord.Embed(title="*:ping_pong: Project Noxius Pong!*",description=f"*The bot latency is {round(bot.latency * 1000)}ms*",colour=0x00000))
+	await ctx.reply(embed=discord.Embed(title="*:ping_pong: opium Pong!*",description=f"*The bot latency is {round(bot.latency * 1000)}ms*",colour=0x00000))
 @bot.command(aliases=['purge','clear'])
 @commands.has_permissions(manage_messages=True)
 async def clean(ctx,tot:int):
@@ -197,7 +192,7 @@ async def botinfo(ctx):
 	members = 0
 	for guild in bot.guilds:
 		members += guild.member_count - 1
-	embed=discord.Embed(title="**Project Noxius Information**",colour=0x00000)
+	embed=discord.Embed(title="**opium Information**",colour=0x00000)
 	embed.add_field(name="*Bot Status:*", value=f"<a:yesverify:1030494749804744765> Working | {version}", inline=True)
 	embed.add_field(name="*Developer*", value=f"```rotomicora```", inline=True)
 	await ctx.reply(embed=embed)	
@@ -205,7 +200,7 @@ async def botinfo(ctx):
 @commands.has_permissions(manage_messages=True)
 async def warn(ctx, member: discord.Member, *, reason=None):
 	try:
-		embed=discord.Embed(title="*Project Noxius: User was warned sucesfully*",description=f"{member.mention}, has been warned from {ctx.author.mention} Reason is ``{reason}``.\nThis warn was requested from {ctx.author.mention}",colour=0x00000)
+		embed=discord.Embed(title="*opium: User was warned sucesfully*",description=f"{member.mention}, has been warned from {ctx.author.mention} Reason is ``{reason}``.\nThis warn was requested from {ctx.author.mention}",colour=0x00000)
 		embed.add_field(name="**Expiration:**", value=f"``Permantly``", inline=True)
 		embed.add_field(name="**Warned By:**", value=f"``{ctx.author}``", inline=True)
 		embed.set_footer(text=f"{ctx.author} | {footerall}")
@@ -234,7 +229,7 @@ async def redeem(ctx,lic):
 			expire = datetime.utcfromtimestamp(int(expire)).strftime('%Y-%m-%d %H:%M:%S')
 			sub = keyssss[lic]
 			keyssss.pop(lic)
-			role = discord.utils.get(ctx.guild.roles, name="Customer")
+			role = discord.utils.get(ctx.guild.roles, name="opium ext")
 			user =ctx.message.author
 			await user.add_roles(role)
 			await ctx.reply(embed=discord.Embed(title="*License Activated*",description=f"{ctx.author.mention}, Your **{sub}** key has been activated. Your Subscription expires: `{expire}`",colour=0x00000))
@@ -246,7 +241,7 @@ async def redeem(ctx,lic):
 			embed.add_field(name="*Expire:*", value=f"```{expire}```", inline=True)
 			await ctx.author.send(embed=embed)
 			logs_channel = bot.get_channel(int(redeemlogs))
-			await logs_channel.send(embed=discord.Embed(title="Project Noxius Key Redeem", description=f"```Key: {lic} | Redeemed by {ctx.author}```", colour=0x000001))
+			await logs_channel.send(embed=discord.Embed(title="opium Key Redeem", description=f"```Key: {lic} | Redeemed by {ctx.author}```", colour=0x000001))
 			await ctx.message.delete()
 		else:
 			await ctx.reply(embed=discord.Embed(title="*Account creation failure!*",description=f"License is invalid, sent information to DM {ctx.author.mention}",colour=0x00000))
@@ -285,7 +280,7 @@ async def deleteuser(ctx,user):
 async def banaccount(ctx,user,*,reason=None):
 	req = requests.get(f"https://keyauth.win/api/seller/?sellerkey={sellerkey}&type=banuser&user={user}&reason={reason}")
 	if req.json()["success"] == True:
-		embed=discord.Embed(title="**Project Noxius: User was Banned**",description=f"{user}, Has been banned from {ctx.guild.name} .\nReason is `{reason}`. This ban was requested from\n{ctx.author.mention}",colour=0x00000)
+		embed=discord.Embed(title="**opium: User was Banned**",description=f"{user}, Has been banned from {ctx.guild.name} .\nReason is `{reason}`. This ban was requested from\n{ctx.author.mention}",colour=0x00000)
 		embed.add_field(name="Expiration:", value=f"``Permantly``", inline=True)
 		embed.add_field(name="Banned By:", value=f"``{ctx.author}``", inline=True)
 		await ctx.reply(embed=embed)
@@ -296,7 +291,7 @@ async def banaccount(ctx,user,*,reason=None):
 async def unbanaccount(ctx,user):
 	req = requests.get(f"https://keyauth.win/api/seller/?sellerkey={sellerkey}&type=unbanuser&user={user}")
 	if req.json()["success"] == True:	
-		embed=discord.Embed(title="**Project Noxius: User was unbanned**",description=f"{user}, Has been unbanned from {ctx.guild.name}.\n",colour=0x00000)
+		embed=discord.Embed(title="**opium: User was unbanned**",description=f"{user}, Has been unbanned from {ctx.guild.name}.\n",colour=0x00000)
 		embed.add_field(name="Unbanned By:", value=f"``{ctx.author}``", inline=True)
 		await ctx.reply(embed=embed)
 	else:
@@ -307,7 +302,7 @@ async def deletelicense(ctx,lic):
 	if req.json()["success"] == True:
 		await ctx.reply(embed=discord.Embed(title="Licnese Deleted!",description='Succesfully Deleted License',colour=0x00000))
 		logs_channel= bot.get_channel(int(deletekeyslogs))
-		await logs_channel.send(embed=discord.Embed(title="Project Noxius License Deleted!",description=f'Succesfully Deleted License ({lic}) by {ctx.author.mention}',colour=0x00001))
+		await logs_channel.send(embed=discord.Embed(title="opium License Deleted!",description=f'Succesfully Deleted License ({lic}) by {ctx.author.mention}',colour=0x00001))
 	else:
 		await ctx.reply("Something went wrong.")
 @bot.command()
@@ -368,13 +363,13 @@ async def keygen(ctx,day:int):
 	if req.json()["success"] == True:
 		key = req.json()["key"]
 		keyssss[key] = day
-		embed1=discord.Embed(title="**Project Noxius Key Generated**",description=f"```{key}```",colour=0x00001)
-		embed1.set_author(name="Project Noxius", icon_url=iconsurl)
+		embed1=discord.Embed(title="**opium Key Generated**",description=f"```{key}```",colour=0x00001)
+		embed1.set_author(name="opium", icon_url=iconsurl)
 		embed1.set_footer(text=footerall, icon_url=iconsurl)
 		embed1.set_thumbnail(url=iconsurl)
 		logsgen2=bot.get_channel(int(logsgen))
 		embed=discord.Embed(title="**Key Generated**",description=f"{ctx.author.mention} ```Generated 1 key, (expire in {day} days)``` ",colour=0x00001)
-		embed.set_author(name="Project Noxius" ,icon_url=iconsurl)
+		embed.set_author(name="opium" ,icon_url=iconsurl)
 		embed.set_footer(text=footerall, icon_url=iconsurl)
 		embed.set_thumbnail(url=iconsurl)
 		await logsgen2.send(embed=embed)
@@ -384,35 +379,35 @@ async def keygen(ctx,day:int):
 		await ctx.send("Failed To Gen The Key!")
 @bot.command()
 async def prices(ctx):
-	embed=discord.Embed(title="***ProjectNoxius Prices <:noxiusrivo2:1034370627043344414>***", description="- *1 Month Key* <:arrow:1034476786056175688> **10€**\n - *Lifetime Key* <:arrow:1034476786056175688> **15€**\n **__Reseller Plan__ <a:_creditcard:1034366627791261706> **\n - *Buy 3 Keys of 50%*\n - *Later you can Buy only a Key yo 60%*\n **__Infinite Gen Keys__ <:lean:1034370612799475712> **\n - *Infinite gen monthly Keys* <:arrow:1034476786056175688> **40€**\n - *All kinds of keys* <:arrow:1034476786056175688> **60€** \n - *No limits or cooldowns*", colour=0x00000)
-	embed.set_author(name="ProjectNoxius", icon_url=iconsurl)
+	embed=discord.Embed(title="***opium Prices <:noxiusrivo2:1034370627043344414>***", description="- *1 Month Key* <:arrow:1034476786056175688> **10€**\n - *Lifetime Key* <:arrow:1034476786056175688> **15€**\n **__Reseller Plan__ <a:_creditcard:1034366627791261706> **\n - *Buy 3 Keys of 50%*\n - *Later you can Buy only a Key yo 60%*\n **__Infinite Gen Keys__ <:lean:1034370612799475712> **\n - *Infinite gen monthly Keys* <:arrow:1034476786056175688> **40€**\n - *All kinds of keys* <:arrow:1034476786056175688> **60€** \n - *No limits or cooldowns*", colour=0x00000)
+	embed.set_author(name="opium", icon_url=iconsurl)
 	embed.set_footer(text=footerall, icon_url=iconsurl)
 	embed.set_thumbnail(url=iconsurl)
 	await ctx.reply(embed=embed)
 	await ctx.message.delete()
 @bot.command()
 async def status(ctx):
-	embed=discord.Embed(title="***Project Noxius Status***", description="\n *FiveM Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *Fortnite Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *Apex Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *Valorant Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *FiveM Cheat* <:arrow:1034476786056175688> **Developing** <:code:1034367846391746590> ", colour=0x00001)
-	embed.set_author(name="Project Noxius",icon_url=iconsurl)
+	embed=discord.Embed(title="***opium Status***", description="\n *FiveM Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *Fortnite Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *Apex Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *Valorant Unban* <:arrow:1034476786056175688> **Working** <a:yesverify:1034461680144502814> \n *FiveM Cheat* <:arrow:1034476786056175688> **Developing** <:code:1034367846391746590> ", colour=0x00001)
+	embed.set_author(name="opium",icon_url=iconsurl)
 	embed.set_footer(text=footerall, icon_url=iconsurl)
 	embed.set_thumbnail(url=iconsurl)
 	await ctx.reply(embed=embed)
 	await ctx.message.delete()
 @bot.command()
 async def download(ctx):
-	role = discord.utils.get(ctx.guild.roles, name="Customer")
+	role = discord.utils.get(ctx.guild.roles, name="opium ext")
 	if role not in ctx.author.roles:
 		logsgen2=bot.get_channel(int(logsdownloads))
 		await logsgen2.send(embed=discord.Embed(title="Someone tried download", description=f"{ctx.author.mention} tried download", colour=0x00001))
 		return
 	else:
-		embed=discord.Embed(title="*Project Noxius Download*", description=f"{downloadnoxius}", colour=0x000001)
-		embed.set_author(name="Project Noxius", icon_url=iconsurl)
+		embed=discord.Embed(title="*opium Download*", description=f"{downloadopium}", colour=0x000001)
+		embed.set_author(name="opium", icon_url=iconsurl)
 		embed.set_footer(text=footerall, icon_url=iconsurl)
 		embed.set_thumbnail(url=iconsurl)
 		await ctx.author.send(embed=embed)
 		logsgen2=bot.get_channel(int(logsdownloads))
-		await ctx.reply(embed=discord.Embed(title="Project Noxius download <:Caixa:1034575086738485289> ", description=f"Check your DM", colour=0x00001))
+		await ctx.reply(embed=discord.Embed(title="opium download ", description=f"Check your DM", colour=0x00001))
 		await ctx.message.delete()
-		await logsgen2.send(embed=discord.Embed(title="Project Noxius download <:Caixa:1034575086738485289> ", description=f"{ctx.author.mention} <:arrow:1034476786056175688>  download", colour=0x00001))
+		await logsgen2.send(embed=discord.Embed(title="opium download ", description=f"{ctx.author.mention} <:arrow:1034476786056175688>  download", colour=0x00001))
 bot.run(token)
