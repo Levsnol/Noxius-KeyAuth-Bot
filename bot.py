@@ -40,7 +40,7 @@ downloadopium="link_here"
 deletekeyslogs="channel_id"
 redeemlogs="channel_id"
 logsdownloads="channel_id"
-iconsurl="{opium icon}"
+iconsurl="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&"
 resethwidlogs="channel_id"
 bot = commands.Bot(command_prefix=prefix, intents=intents)
 bot.remove_command("help")
@@ -59,9 +59,9 @@ async def help(ctx):
     embed.add_field(name="*opium General Help*", value=f"```{prefix}help general```")
     embed.add_field(name="*opium Staffs Help*", value=f"```{prefix}help staff```")
     embed.add_field(name="*opium Help*", value=f"```{prefix}help auth```")
-    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/opium_rivo_2.0_sticker.png")
-    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1028763505555406849/1028770051274309672/opium_rivo_2.0_sticker.png")
-    embed.set_thumbnail(url="{opium icon}")
+    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
     await ctx.reply(embed=embed)
 @help.command()
 async def general(ctx):
@@ -72,9 +72,9 @@ async def general(ctx):
     embed.add_field(name="*User Info*", value=f"```{prefix}userinfo <@user>```", inline=True)
     embed.add_field(name="*Redeem Key*", value=f"```{prefix}redeem <key>```", inline=True)
     embed.add_field(name="*Bot Uptime*", value=f"```{prefix}uptime```", inline=True)
-    embed.set_thumbnail(url="{opium icon}")
-    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="{opium icon}")
-    embed.set_author(name="opium", icon_url="{opium icon}")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
     await ctx.reply(embed=embed)
     await ctx.message.delete()
 
@@ -89,18 +89,18 @@ async def staff(ctx):
     embed.add_field(name="*Clear messages*", value=f"```{prefix}clear <messages>```", inline=True)
     embed.add_field(name="*Change Nickname*", value=f"```{prefix}nick <@user> <newname>```", inline=True)
     embed.add_field(name="*Reset Username*", value=f"```{prefix}resetnick <@user>```", inline=True)
-    embed.set_author(name="opium", icon_url="{opium icon}")
-    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="{opium icon}")
-    embed.set_thumbnail(url="{opium icon}")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
     await ctx.reply(embed=embed)
     await ctx.message.delete()    
 
 @help.command()
 async def auth(ctx):
     embed=discord.Embed(title="*Noxis Auth Help*", description=f"*List of all commands of Auth*", colour=0x00001)
-    embed.set_author(name="opium", icon_url="{opium icon}")
-    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="{opium icon}")
-    embed.set_thumbnail(url="sticker.png")
+    embed.set_author(name="opium", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_footer(text=f"{ctx.author.name} | {footerall}", icon_url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1261512004984901744/1261561010800820234/IMG_2843.png?ex=669367bf&is=6692163f&hm=fd34f19baba80fb0af0255d5f2a190b2b164e0697efacdec3083ce31bdfa244b&.png")
     embed.add_field(name="*Key Gen*", value=f"```{prefix}keygen <expire>```", inline=True)
     embed.add_field(name="*Reset Hwid*", value=f"```{prefix}resethwid <username>```", inline=True)
     embed.add_field(name="*Delete User*", value=f"```{prefix}deleteuser <username>```", inline=True)
