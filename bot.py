@@ -1,4 +1,4 @@
-
+m
 import os
 import random
 
@@ -193,8 +193,8 @@ async def botinfo(ctx):
 	for guild in bot.guilds:
 		members += guild.member_count - 1
 	embed=discord.Embed(title="**opium Information**",colour=0x00000)
-	embed.add_field(name="*Bot Status:*", value=f"<a:yesverify:1030494749804744765> Working | {version}", inline=True)
-	embed.add_field(name="*Developer*", value=f"```rotomicora```", inline=True)
+	embed.add_field(name="*Bot Status:*", value=f" Working 🦇 | {version}", inline=True)
+	embed.add_field(name="*Developer*", value=f"```Opiumdev 🦇```", inline=True)
 	await ctx.reply(embed=embed)	
 @bot.command()
 @commands.has_permissions(manage_messages=True)
